@@ -1,0 +1,28 @@
+﻿@model IEnumerable<BookModel>
+@{
+    ViewData["Title"] = "All Books";
+}
+
+@section breadcrumb{
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Books</li>
+        </ol>
+    </nav>
+}
+
+<div class="container">
+    <h3 class="display-4"></h3>
+    <div class="row">
+
+        @foreach (var book in Model)
+        {
+            <div class="col-md-4">
+               <partial name="_bookThumbnail" model="@book" />
+            </div>
+        }
+
+
+    </div>
+</div>

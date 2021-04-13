@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Dynamic;
 
 namespace asnan_Bookstore.Controllers
 {
@@ -20,6 +21,7 @@ namespace asnan_Bookstore.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.Title = "Asnan";
             return View();
         }
 
